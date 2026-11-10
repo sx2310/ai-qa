@@ -7,7 +7,7 @@ pipeline {
             steps { git branch: 'main', url: 'https://github.com/sx2310/ai-qa.git' }
         }
         stage('Deploy') {
-            steps { sh 'sudo /opt/ai-qa/deploy.sh' }
+            steps { sh 'sudo bash /opt/ai-qa/deploy.sh' }
         }
         stage('Verify') {
             steps { sh 'curl -fsS http://127.0.0.1/health' }
