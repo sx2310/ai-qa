@@ -21,7 +21,7 @@ def answer(q):
 
 @app.get("/health")
 def health():
-    return jsonify(status="ok", version="v2.0", time=datetime.now().isoformat())
+    return jsonify(status="ok", version="v3.0-broken", time=datetime.now().isoformat())
 
 @app.post("/api/ask")
 def api_ask():
